@@ -2,5 +2,4 @@
 
 These are my solutions for problems on Spoj
 
-Format of the file name is : 
-###problem code.c
+File name is given as <b>problem code</b> mentioned on spoj
