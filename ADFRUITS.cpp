@@ -9,17 +9,18 @@ char s1[200], s2[200];
 int l1, l2;
 int dp[200][200];
 int flag[200][200];
-int temp;
+
 int cal(int i, int j) {
+	int temp;
 	//cout<<i<<" "<<j<<endl;
 	if (i >= l1 && j >= l2) {
 		return 0;
 	}
 	if(i >= l1) {
-		return l2-j;
+		return 1+cal(i,j+1);
 	}
 	if(j >= l2){
-		return l1-i;
+		return 1 + cal(i+1, j);
 	}
 	if(s1[i] == s2[j]){
 		return 1+cal(i+1, j+1);
