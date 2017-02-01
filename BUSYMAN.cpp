@@ -12,10 +12,10 @@ pair<int,int> p[100010];
 
 
 bool cmp(pint a, pint b) {
-	if(a.second == b.second) {
-		return a.first < b.first;
+	if(a.first == b.first) {
+		return a.second > b.second;
 	}else{
-		return a.second < b.second;
+		return a.first > b.first;
 	}
 }
 
@@ -32,11 +32,11 @@ int main (void) {
 		}
 		sort(p,p+n, cmp);
 		int ans = 1;
-		int pre = p[0].second;
+		int pre = p[0].first;
 		for(i = 1; i < n; i++) {
-			if (p[i].first>=pre) {
+			if (p[i].second<=pre) {
 				ans++;
-				pre = p[i].second;
+				pre = p[i].first;
 			}
 		}
 		cout<<ans<<endl;
