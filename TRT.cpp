@@ -8,27 +8,26 @@ using namespace std;
 #define MOD 1000000007ll
 int n;
 int arr[2002];
-int dp[2002][2002][2];
+int dp[2002][2002];
 int ans[2002];
 
 int cal (int d, int i, int j) {
 	if(i > j){
 		return 0;
 	}
-	if(dp[i][j][0]&&dp[i][j][1] == d) {
-		return dp[i][j][0];
+	if(dp[i][j]) {
+		return dp[i][j];
 	}
 	int a, b;
 	a = arr[i]*d + cal(d+1, i+1, j);
 	b = arr[j]*d + cal(d+1, i, j-1);
-	dp[i][j][0] = max(a, b);
-	dp[i][j][1] = d;
+	dp[i][j] = max(a, b);
 	// if(a > b) {
 	// 	ans[d] = arr[i];
 	// }else {
 	// 	ans[d] = arr[j];
 	// }
-	return dp[i][j][0];
+	return dp[i][j];
 }
 
 int main (void) {
