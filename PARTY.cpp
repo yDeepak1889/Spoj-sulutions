@@ -29,7 +29,6 @@ int main (void) {
 			cin>>arr[i].w>>arr[i].c;
 		}
 		sort(arr, arr+n, cmp);
-
 		for (i = 1; i <= n; i++) {
 			for (int j = 1; j <= w; j++) {
 				if(j < arr[i-1].w) {
@@ -43,7 +42,6 @@ int main (void) {
 		}
 		int j;
 		int sum = 0;
-
 		sum = dp[n][w];
 		for (i = 1; i <= w; i++) {
 			if(dp[n][i] == sum) {
