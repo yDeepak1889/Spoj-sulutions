@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
+
 using namespace std;
-int main (void)
-{
+
+int main() {
 	int test;
 	cin>>test;
 	while (test--) {
