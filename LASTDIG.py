@@ -1,7 +1,7 @@
 test=int(input())
 while(test):
     a=input().split()
-    a,b=[int(a[0]),int(a[1])]
+    a,b=map(int,[a[0],a[1]])
     if b==0:
         a=1
     last=a%10
