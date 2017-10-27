@@ -8,7 +8,7 @@ while(test):
     d=last%5
     if d==0 or d==1:
         incr=1
-        loop=1
+        loop=1+0
     elif d==2 or d==3:
         incr=4
         loop=b%incr
